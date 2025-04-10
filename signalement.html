@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Signalement - CityGuardian</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+
+    .navbar {
+      background-color: #1a237e;
+    }
+
+    .navbar-brand,
+    .nav-link,
+    .btn-deco {
+      color: #fff !important;
+    }
+
+    .nav-link.active {
+      border-bottom: 2px solid #ffca28;
+    }
+
+    .form-section {
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    footer {
+      background-color: #1a237e;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">CityGuardian</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="accueil.html">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="tableau de bord.html">Tableau de bord</a></li>
+          <li class="nav-item"><a class="nav-link" href="alertes.html">Alertes</a></li>
+          <li class="nav-item"><a class="nav-link active" href="signalement.html">Signalement</a></li>
+        </ul>
+        <a class="btn btn-warning btn-deco" href="#">Se déconnecter</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Formulaire de signalement -->
+  <div class="container my-5">
+    <h2 class="text-center text-primary mb-4">Signaler un incident</h2>
+    <div class="form-section mx-auto" style="max-width: 700px;">
+      <form>
+        <div class="mb-3">
+          <label for="typeIncident" class="form-label">Type d'incident</label>
+          <select class="form-select" id="typeIncident" required>
+            <option value="">Sélectionner...</option>
+            <option>Accident</option>
+            <option>Incendie</option>
+            <option>Agression</option>
+            <option>Vol</option>
+            <option>Autre</option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label for="lieu" class="form-label">Lieu</label>
+          <input type="text" class="form-control" id="lieu" placeholder="Ex: Marché Dantokpa" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="description" class="form-label">Description</label>
+          <textarea class="form-control" id="description" rows="4" placeholder="Donnez plus de détails..." required></textarea>
+        </div>
+
+        <div class="mb-3">
+          <label for="date" class="form-label">Date de l'incident</label>
+          <input type="date" class="form-control" id="date" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="photo" class="form-label">Photo ou preuve (facultatif)</label>
+          <input type="file" class="form-control" id="photo">
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100">Envoyer le signalement</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 CityGuardian. Tous droits réservés.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
